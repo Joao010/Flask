@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    number = randint(0, 1)
-    return render_template('index.html', number = number)
+    return render_template('index.html')
 
 @app.route('/2º projeto web')
 def hello():
