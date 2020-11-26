@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block style %}
+    body
+    {
+        font-family: Arial;
+    }
+{% endblock %}
+
+{% block body %}
+    <h1>Tasks</h1>
+    <ul>
+        {% if todos == [] %}
+            <h5>--- nothing here yet ---</h5>
+        {% else %}
+            {% for todo in todos %}
+                <li>{{ todo }}</li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+
+    <a href="/add" style="color:rgb(150, 226, 37)">Create a new task</a><br>
+    <a href="/remove" style="color:rgb(236, 29, 29)">Remove a task</a>
+{% endblock %}
