@@ -1,1 +1,1 @@
-# training and personal project codes
+# Flask Project
