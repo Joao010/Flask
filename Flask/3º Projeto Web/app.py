@@ -4,11 +4,11 @@ app = Flask(__name__)
 
 todos = list()
 
-@app.route('/')
+@app.route('/') # create first route
 def tasks():
     return render_template('tasks.html', todos = todos)
 
-@app.route('/add', methods = ['GET', 'POST'])
+@app.route('/add', methods = ['GET', 'POST']) # create a second route with the GET and POST methods
 def add():
     if request.method == 'GET':
         return render_template('add.html')
@@ -17,7 +17,7 @@ def add():
         todos.append(todo)
         return redirect('/')
 
-@app.route('/remove', methods = ['GET', 'POST'])
+@app.route('/remove', methods = ['GET', 'POST']) # create a third route with the GET and POST methods
 def remove():
     if request.method == 'GET':
         return render_template('remove.html')
