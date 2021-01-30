@@ -3,11 +3,11 @@ from random import randint
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/') # create first route
 def index():
     return render_template('index.html')
 
-@app.route('/2º projeto web')
+@app.route('/2º projeto web') # create second route
 def hello():
     name = request.args.get('name')
     if not name: #loads the error template
